@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Crear";
+}
+
+<h2>Crear</h2>
+
+<div class="panel-heading "><h3>Crear </h3></div>
+<div id="inputs" class="panel-body">
+
+    <form action="/Ingreso/Crear?idCuenta=@ViewBag.IdCuenta" method="post">
+        <div>
+            <label class="control-label">Fecha :</label>
+            <input class="form-control" type="date" name="FechaHora" />
+        </div>
+        <div>
+            <label class="control-label">Descripcion :</label>
+            <input class="form-control" type="text" name="Descripcion" />
+        </div>
+        <div>
+            <label class="control-label">Monto :</label>
+            <input class="form-control" type="text" name="Monto" />
+        </div>
+        <br />
+        <button id="btnGuardar" class="btn btn-primary "><span class="glyphicon glyphicon-saved"></span> Guardar</button>
+
+    </form>
+
+

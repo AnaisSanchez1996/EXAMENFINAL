@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Crear";
+}
+
+<h2>Crear</h2>
+
+
+<form action="/Cuenta/Crear" method="post">
+    <div>
+        <label class="control-label">NOMBRE:</label>
+        <input class="form-control" type="text" name="Nombre" />
+    </div>
+    <div>
+        <label class="control-label">CATEGORIA :</label>
+        <select class="form-control" name="Categoria">
+            <option value="Debito">Debito</option>
+            <option value="Credito">Credito</option>
+        </select>
+    </div>
+    <div>
+        <label class="control-label">Saldo inicial :</label>
+        <input class="form-control" type="number" name="SaldoInicial" />
+    </div>
+    <br />
+    <button id="btnGuardar" class="btn btn-primary "><span class="glyphicon glyphicon-saved"></span> Guardar</button>
+
+</form>
+                

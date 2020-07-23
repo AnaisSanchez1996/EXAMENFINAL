@@ -1,0 +1,33 @@
+﻿@{
+                
+
+                ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+
+<a class="btn btn-light" id="btnCrear" href="/Cuenta/Crear"><span class="glyphicon glyphicon-plus"></span> Crear </a>
+
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Categoria</th>
+                    <th>Saldo inicial</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.IdCuenta</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Categoria</td>
+                        <td>@item.SaldoInicial</td>
+                        <td><a href="/Gasto/Index?idCuenta=@item.IdCuenta">Gasto</a></td>
+                        <td><a href="/Ingreso/Index?idCuenta=@item.IdCuenta">Ingreso</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
